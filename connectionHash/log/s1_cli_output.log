@@ -1,0 +1,41 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of forward
+action:              nop
+runtime data:        
+RuntimeCmd: Setting default action of ecmp_group
+action:              nop
+runtime data:        
+RuntimeCmd: Setting default action of ecmp_nhop
+action:              nop
+runtime data:        
+RuntimeCmd: Setting default action of send_frame
+action:              nop
+runtime data:        
+RuntimeCmd: Adding entry to lpm match table forward
+match key:           LPM-0a:00:01:01/32
+action:              set_nhop
+runtime data:        00:00:0a:00:01:01	00:01
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to lpm match table ecmp_group
+match key:           LPM-0a:00:00:01/32
+action:              set_ecmp_select
+runtime data:        00	02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table ecmp_nhop
+match key:           EXACT-00:01
+action:              set_ecmp_nhop
+runtime data:        00:00:0a:00:02:02	0a:00:02:02	00:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table ecmp_nhop
+match key:           EXACT-00:02
+action:              set_ecmp_nhop
+runtime data:        00:00:0a:00:03:03	0a:00:03:03	00:03
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table send_frame
+match key:           EXACT-00:01
+action:              rewrite_sip
+runtime data:        0a:00:00:01
+Entry has been added with handle 0
+RuntimeCmd: 
